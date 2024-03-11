@@ -500,6 +500,62 @@ public class ObjectDefinition562 {
 						dat.writeShort(object.bgsounds[i3]);
 					}
 				}
+				if(object.hillskewType == 2 || object.hillskewAmount != -1){
+					dat.writeByte(81);
+					dat.writeByte(object.hillskewAmount);
+				}
+				if(object.render){
+					dat.writeByte(82);
+				}
+				if(!object.castshadow){
+					dat.writeByte(88);
+				}
+				if(!object.allowrandomizedanimation){
+					dat.writeByte(89);
+				}
+				if(object.aBoolean211){
+					dat.writeByte(90);
+				}
+				if(object.members){
+					dat.writeByte(91);
+				}
+				if(object.hillskewType == 3 || object.hillskewAmount != -1){
+					dat.writeByte(93);
+					dat.writeByte(object.hillskewAmount);
+				}
+				if(object.hillskewType == 4){
+					dat.writeByte(94);
+				}
+				if(object.hillskewType == 5){
+					dat.writeByte(95);
+				}
+				if(object.hasanimation){
+					dat.writeByte(96);
+				}
+				if(object.mapSceneRotated){
+					dat.writeByte(97);
+				}
+				if(object.aBoolean214){
+					dat.writeByte(98);
+				}
+				if(object.cursor1Op != -1 || object.cursor1 != -1){
+					dat.writeByte(99);
+					dat.writeByte(object.cursor1Op);
+					dat.writeShort(object.cursor1);
+				}
+				if(object.cursor2Op != -1 || object.cursor2 != -1){
+					dat.writeByte(100);
+					dat.writeByte(object.cursor2Op);
+					dat.writeShort(object.cursor2);
+				}
+				if(object.mapSceneAngleOffset != 0){
+					dat.writeByte(101);
+					dat.writeByte(object.mapSceneAngleOffset);
+				}
+				if(object.mapscene != 0){
+					dat.writeByte(102);
+					dat.writeShort(object.mapscene);
+				}
 				dat.writeByte(0);
 				int offset2 = dat.size();
 				int writeOffset = offset2 - offset1;
